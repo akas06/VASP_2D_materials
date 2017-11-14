@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+for file in POSCAR-0*
+do
+  tmp=${file#*-}
+  num=${tmp%}
+  mkdir $num
+  cp $file ./$num/POSCAR
+  cp INCAR ./$num/
+  cp KPOINTS ./$num/
+  cp POTCAR ./$num/
+  cp vdw_kernel.bindat ./$num/
+  cd $num 
+  aix7_submit.py  /gpfs_home/wvandenb/va/vasp_latest  --noxterm
+  cd ../
+done
