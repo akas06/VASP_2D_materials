@@ -1,0 +1,20 @@
+System Tellurium structural relaxation
+ISMEAR=0; SIGMA=0.1;
+ISTART=0;
+
+KPAR=6
+
+IBRION=-1;
+#ISIF=2;
+#NELMIN=4
+#NSW=200
+EDIFF=1E-8
+
+LVDW=.TRUE
+IVDW=11
+GGA=RE
+AGGAC=0.0
+LUSE_VDW=.TRUE
+
+ENCUT=350
+PREC=Accurate
